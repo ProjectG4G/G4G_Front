@@ -1,13 +1,16 @@
 import './App.css';
 import {useTranslation } from "react-i18next";
+import Login from './pages/Login';
+
+
 
 function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="App">
-     
-    </div>
+    <div className="App">     
+    <Login/>
+  </div>
   );
 }
 
