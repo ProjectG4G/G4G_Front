@@ -1,13 +1,13 @@
 import {useTranslation } from "react-i18next";
 import Header from '../components/Header'
-import Log from '../components/Log'
 import Logo from '../components/Logo'
 import '../App.css'
 import { Route, Routes, Link } from "react-router-dom";
+import SelectCountry from "../components/SelectCountry";
 
 
 
-function Login() {
+function Country() {
   const { t } = useTranslation();
 
   return (
@@ -19,8 +19,7 @@ function Login() {
         <Logo/>
         </div>
         <div className='content'>
-        <Log/>
-
+        <SelectCountry/>
         </div>
  
     
@@ -29,4 +28,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Country;

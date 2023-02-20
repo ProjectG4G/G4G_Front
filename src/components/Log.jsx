@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { Route, Routes, Link, useNavigate } from "react-router-dom";
 
-const Content = () => {
+import { useData } from "../DataContext";
+const Log = () => {
+    const navigate = useNavigate();
+    const {data,setValues} = useData();
     const { t } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState("ky");
+
    const onChangeHandler = (e) => {
       const index = e.target.selectedIndex;
       const el = e.target.childNodes[index]
       const option =  el.getAttribute('id');  
+      const selectedOption = e.target.value;
+      setSelectedLanguage(selectedOption);
       i18next.changeLanguage(option)
     }
     const {
@@ -18,11 +26,20 @@ const Content = () => {
         reset,
         watch,
         getValues,
-    } = useForm({ mode: "onChange" });
+    } = useForm({ 
+        defaultValues: {
+            firstName : data.firstName,
+             lastName:data.lastName,
+             email: data.email,
+              password: data.password, 
+              passwordСonfirm: data.passwordСonfirm
+        },
+        mode: "onChange" });
 
     const onSubmit = (data) => {
-        alert(JSON.stringify(data));
-        reset();
+        console.log(JSON.stringify(data));
+        setValues(data);
+        navigate('login-country')
     };
     return (
         <div className="reg">
@@ -58,7 +75,7 @@ const Content = () => {
                                 left: "52%",
                             }}
                         >
-                            {errors?.lastName?.message || "Error"}
+                            {errors?.lastName?.message}
                         </p>
                     )}
                     {errors?.firstName && (
@@ -69,7 +86,7 @@ const Content = () => {
                                 paddingLeft: "15px",
                             }}
                         >
-                            {errors?.firstName?.message || "Error"}
+                            {errors?.firstName?.message}
                         </p>
                     )}
                 </div>
@@ -109,7 +126,7 @@ const Content = () => {
                                 left: "52%",
                             }}
                         >
-                            {errors?.password?.message || "Error"}
+                            {errors?.password?.message}
                         </p>
                     )}
                     {errors?.email && (
@@ -120,7 +137,7 @@ const Content = () => {
                                 paddingLeft: "15px",
                             }}
                         >
-                            {errors?.email?.message || "Error"}
+                            {errors?.email?.message}
                         </p>
                     )}
                 </div>
@@ -215,6 +232,7 @@ const Content = () => {
                         name="language"
                         id="language"
                         onChange={onChangeHandler}
+                         value={selectedLanguage}
                     >
                         <option
                             id="ky"
@@ -237,4 +255,4 @@ const Content = () => {
     );
 };
 
-export default Content;
+export default Log;
