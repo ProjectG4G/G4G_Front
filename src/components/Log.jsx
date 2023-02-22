@@ -43,7 +43,7 @@ const Log = () => {
     const onSubmit = (data) => {
         console.log(JSON.stringify(data));
         setValues(data);
-        navigate("login-country");
+        navigate("select-country");
     };
     return (
         <div className="reg">

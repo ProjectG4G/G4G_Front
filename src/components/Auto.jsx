@@ -110,6 +110,9 @@ const Auto = () => {
                         className="reg_submit btn"
                         disabled={!isValid}
                         type="submit"
+                        onClick={()=> {
+                            navigate('/')
+                        }}
                     >
                         {t("reg_login")}
                     </button>

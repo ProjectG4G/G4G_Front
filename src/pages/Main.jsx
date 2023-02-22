@@ -7,29 +7,34 @@ import { Route, Routes, Link } from "react-router-dom";
 import Restore from "../components/Restore";
 import Auto from "../components/Auto";
 import MainHeader from "../components/MainHeader";
+import MainContent from "../components/MainContent";
+import MainAbout from "../components/MainAbout";
+import Goals from "../components/Goals";
+import Features from "../components/Features";
+import Footer from "../components/Footer";
 function Main() {
   const { t } = useTranslation();
 
   return (
     <div className="main">
-      <div className='main_header'>
+      <div>
       <MainHeader/>
       </div>
-      <div className='main_container'>
-        <Logo/>
+      <div>
+        <MainContent/>
         </div>
-        <div className='about'>
-        <Restore/>
+        <div>
+        <MainAbout/>
         </div>
- <div className="goals">
- <Restore/>
+ <div>
+ <Goals/>
  </div>
 
- <div className="features">
- <Logo/>
-
+ <div>
+<Features/>
  </div>
  <footer>
+    <Footer/>
 
  </footer>
     

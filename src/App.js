@@ -17,7 +17,7 @@ function App() {
       <Route path='/' element={<Main/>}></Route> 
       <Route path='/login' element={<Login/>}></Route> 
 
-      <Route path='/login-country' element={<Country/>}></Route>   
+      <Route path='/login/select-country' element={<Country/>}></Route>   
       <Route path='/auth' element={<Auth/>}></Route>      
       <Route path='/auth/restore' element={<Res/>}></Route>      
       <Route path='/auth/restore/email' element={<EmailPage/>}></Route>      

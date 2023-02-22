@@ -46,7 +46,7 @@ const SelectCountry = () => {
     };
   
     const handleBackButtonClick = () => {
-      navigate('/');
+      navigate('/login');
     }
   
     let navigate = useNavigate();
