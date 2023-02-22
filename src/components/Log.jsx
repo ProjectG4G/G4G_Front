@@ -1,24 +1,27 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
-
+import Auth from "../pages/Auth";
 import { useData } from "../DataContext";
 const Log = () => {
     const navigate = useNavigate();
-    const {data,setValues} = useData();
+    const { data, setValues } = useData();
     const { t } = useTranslation();
-    const [selectedLanguage, setSelectedLanguage] = useState("ky");
+    const [selectedLanguage, setSelectedLanguage] = useState(
+        localStorage.getItem("selectedLanguage") || "ky"
+      );
+    
+      useEffect(() => {
+        i18next.changeLanguage(selectedLanguage);
+        localStorage.setItem("selectedLanguage", selectedLanguage);
+      }, [selectedLanguage]);
+    
+      const onChangeLangHandler = (event) => {
+        setSelectedLanguage(event.target.value);
+      };
 
-   const onChangeHandler = (e) => {
-      const index = e.target.selectedIndex;
-      const el = e.target.childNodes[index]
-      const option =  el.getAttribute('id');  
-      const selectedOption = e.target.value;
-      setSelectedLanguage(selectedOption);
-      i18next.changeLanguage(option)
-    }
     const {
         register,
         formState: { errors, isValid },
@@ -26,20 +29,21 @@ const Log = () => {
         reset,
         watch,
         getValues,
-    } = useForm({ 
+    } = useForm({
         defaultValues: {
-            firstName : data.firstName,
-             lastName:data.lastName,
-             email: data.email,
-              password: data.password, 
-              passwordСonfirm: data.passwordСonfirm
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            password: data.password,
+            passwordСonfirm: data.passwordСonfirm,
         },
-        mode: "onChange" });
+        mode: "onChange",
+    });
 
     const onSubmit = (data) => {
         console.log(JSON.stringify(data));
         setValues(data);
-        navigate('login-country')
+        navigate("login-country");
     };
     return (
         <div className="reg">
@@ -93,7 +97,7 @@ const Log = () => {
 
                 <div className="block2">
                     <input
-                        placeholder="e-mail"
+                        placeholder="E-mail"
                         className="email"
                         {...register("email", {
                             required: "поле обязательно к заполнению",
@@ -179,6 +183,9 @@ const Log = () => {
                         className="reg_submit btn"
                         disabled={!isValid}
                         type="submit"
+                        onClick={() => {
+                            <Link to="/email" />;
+                        }}
                     >
                         {t("reg_submit")}
                     </button>
@@ -187,16 +194,16 @@ const Log = () => {
                 <div className="block5">
                     <p>
                         {t("reg_checkReg")}{" "}
-                        <a
+                        <Link
+                            to={"/auth"}
                             style={{
                                 textDecoration: "none",
                                 color: "#7F3A85",
                                 cursor: "pointer",
                             }}
-                            href=""
                         >
                             {t("reg_login")}
-                        </a>{" "}
+                        </Link>
                     </p>
                 </div>
                 <div className="block6">
@@ -231,25 +238,18 @@ const Log = () => {
                         className="select-css"
                         name="language"
                         id="language"
-                        onChange={onChangeHandler}
-                         value={selectedLanguage}
+                        onChange={onChangeLangHandler}
+                        value={selectedLanguage}
                     >
-                        <option
-                            id="ky"
-                            value="ky"
-                        >
+                        <option id="ky" value="ky">
                             кыргызча
                         </option>
 
-                        <option
-                         id="ru"
-                            value="ru"
-                        >
+                        <option id="ru" value="ru">
                             русский
                         </option>
                     </select>
                 </div>
-
             </form>
         </div>
     );

@@ -1,22 +1,28 @@
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import Backbtn from '../images/back-btn.png';
 import { useData } from "../DataContext";
-
 const SelectCountry = () => {
+    const [selectedLanguage, setSelectedLanguage] = useState(
+        localStorage.getItem("selectedLanguage") || "ky"
+      );
+    
+      useEffect(() => {
+        i18next.changeLanguage(selectedLanguage);
+        localStorage.setItem("selectedLanguage", selectedLanguage);
+      }, [selectedLanguage]);
+    
+      const onChangeLangHandler = (event) => {
+        setSelectedLanguage(event.target.value);
+      };
     const { setValues, data } = useData();
     const [selectCountry, setSelectCountry] = useState(null);
     const [selectCity, setSelectCity] = useState(null);
     const { t } = useTranslation();
-    const onChangeHandler = (e) => {
-      const index = e.target.selectedIndex;
-      const el = e.target.childNodes[index];
-      const option = el.getAttribute("id");
-      i18next.changeLanguage(option);
-    };
+
   
     const {
       register,
@@ -57,7 +63,6 @@ const SelectCountry = () => {
             <select
               onChange={(e) => {
                 setSelectCountry(e.target.value);
-                onChangeHandler(e);
               }}
               defaultValue={"def_country"}
               className="form-control"
@@ -136,16 +141,16 @@ const SelectCountry = () => {
   <div className="block5">
     <p>
       {t("reg_checkReg")}{" "}
-      <a
-        style={{
-          textDecoration: "none",
-          color: "#7F3A85",
-          cursor: "pointer",
-        }}
-        href=""
-      >
-        {t("reg_login")}
-      </a>{" "}
+      <Link to={'/auth'}
+                            style={{
+                                textDecoration: "none",
+                                color: "#7F3A85",
+                                cursor: "pointer",
+                            }}
+                        
+                        >
+                            {t("reg_login")}
+                        </Link>
     </p>
   </div>
   <div className="block7">
@@ -153,7 +158,7 @@ const SelectCountry = () => {
       className="select-css"
       name="language"
       id="language"
-      onChange={onChangeHandler}
+      onChange={onChangeLangHandler}
     >
       <option id="ky" value="ky">
         кыргызча

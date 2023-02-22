@@ -1,11 +1,13 @@
 import {useTranslation } from "react-i18next";
 import Header from '../components/Header'
+import Log from '../components/Log'
 import Logo from '../components/Logo'
 import '../App.css'
 import { Route, Routes, Link } from "react-router-dom";
-import SelectCountry from "../components/SelectCountry";
+import Restore from "../components/Restore";
+import Auto from "../components/Auto";
 
-function Country() {
+function Res() {
   const { t } = useTranslation();
 
   return (
@@ -17,7 +19,8 @@ function Country() {
         <Logo/>
         </div>
         <div className='content'>
-        <SelectCountry/>
+        <Restore/>
+
         </div>
  
     
@@ -26,4 +29,4 @@ function Country() {
   );
 }
 
-export default Country;
+export default Res;
