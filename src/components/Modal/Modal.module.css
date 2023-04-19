@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #151515;
+    transition: 0.3s;
+    overflow: hidden;
+}
+.main_logo  {
+    margin-left: 4.8rem;
+    width: 5rem;
+    height: 4rem;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .centre {
+    margin-top: 11rem;
+    margin-left: 5rem;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    transition: 0.3s;
+
+
+  }
+
+  .btn {
+   justify-content: center;
+   align-items: center;
+    border:  none;
+    outline: none;
+    background: #FFFFFF;
+border-radius: 20px;
+width: 200px;
+cursor: pointer;
+height: 56px;
+  }
+
+  .back  {
+    width: 19rem;
+    height: 31rem;
+    
+  }
+  
+  

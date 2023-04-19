@@ -1,0 +1,65 @@
+.back_btn {
+    width: 30px;
+height: 30px;
+cursor: pointer;
+margin-top: 3rem;
+margin-left: 3rem;
+
+}
+.form_submit    {
+    width: 1366px;
+    background: #fff;
+height: 959px;
+margin:  2rem auto;
+border: 1px solid #EEAFED;
+border-radius: 30px;
+display: flex;
+justify-content: center;
+}
+
+.reg_block  {
+    width: 43rem;
+    margin-top: 3rem;
+    background: transparent;
+}
+.forms {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+.lights {
+    display: flex;
+    width: 43rem;
+
+}
+.input_design   {
+    width: 628px;
+height: 76px;
+background: #FFFFFF;
+/* colors/violet main color btn */
+
+border: 1px solid #C192EE;
+border-radius: 20px;
+}
+form label {
+    background: transparent;
+}
+.label  {
+    background: transparent;
+    margin-top: 20px;
+}
+.input_design   {
+    padding-left: 20px;
+
+}
+.submit {
+    width: 628px;
+height: 77px;
+cursor: pointer;
+background: #C192EE;
+border-radius: 20px;
+border: none;
+outline: none;
+color: #fff;
+margin-top: 3rem;
+}

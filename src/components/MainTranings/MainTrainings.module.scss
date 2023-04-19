@@ -1,0 +1,89 @@
+.title{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 3rem;
+
+}
+.incoming   {
+    color: #6D6D6D;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    margin-top: 8rem;
+}
+.trainings_block    {
+    width: 30rem;
+    height: 20rem;
+    position: relative;
+    background: #FFFFFF;
+border: 1px solid #EEAFED;
+border-radius: 20px;
+}
+.tranings_container {
+    margin: 0 auto;
+    width: 1444px;
+
+  
+   
+}
+.main_tranings  {
+    margin:  0 auto;
+    width: 1444px;
+ 
+}
+.trainings_title    {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    text-transform: lowercase;
+    background: transparent;
+    width: 300px;
+}
+.trainings  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem auto;
+    gap: 10px;
+
+}
+.data   {
+    background: transparent;
+    font-size: 0.8rem;
+    margin-top: 2.1rem;
+    position: absolute;
+    right: 20px;
+}
+
+.trainings_img  {
+background: transparent;
+width: 300px;
+height: 200px;
+position: absolute;
+bottom: 0;
+right: 0;
+}
+.trainings_header   {
+    background: transparent;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.training_centre    {
+    display: flex;
+    background: transparent;
+}
+
+.trainings_btn  {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 25rem;
+    height: 4rem;
+    background: #C192EE;
+    color: #fff;
+border-radius: 20px;
+position: absolute;
+bottom: 3rem;
+left: 2rem;
+z-index: 99;
+}

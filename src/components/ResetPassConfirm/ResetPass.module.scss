@@ -1,0 +1,161 @@
+.reset_pass_confirm {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+.firstname  {
+
+    width: 49%;
+        height: 3.65rem;
+      border: 1px solid #6D6D6D;
+    border-radius: 10px;
+      background-color: transparent;
+      margin-right: 10px;
+      padding-left: 20px;
+    }
+    .lastname {
+      padding-left: 20px;
+    
+      width: 49%;
+    
+        height: 3.65rem;
+      border: 1px solid #6D6D6D;
+    
+    border-radius: 10px;
+      background-color: transparent;
+    }
+    .email {
+     width: 49%;
+     
+        height: 3.65rem;
+      border: 1px solid #6D6D6D;
+    border-radius: 10px;
+      background-color: transparent;
+      margin-right: 10px;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+    .password {
+      padding-left: 20px;
+      margin-top: 20px;
+      width: 49%;
+      height: 3.65rem;
+      border: 1px solid #6D6D6D;
+    border-radius: 10px;
+      background-color: transparent;
+    
+    }
+    .password_confirm {
+     margin-top: 20px;
+      width: 100%;
+      padding-left: 20px;
+        height: 3.65rem;
+      border: 1px solid #6D6D6D;
+    border-radius: 10px;
+      background-color: transparent;
+    }
+    .reg_light  {
+      width: 49%;
+      height: 10px;
+    
+      background: #6D6D6D;
+      border-radius: 5px;
+    
+    }
+    .reg_light:first-child {
+      margin-right: 10px;
+    
+    }
+    .reg_light_active  {
+      width: 49%;
+      height: 10px;
+      margin-left: 10px;
+    
+      background: #C192EE;
+      border-radius: 5px;
+    
+    }
+  
+    .reg_btns {
+      display: flex;
+      margin-bottom: 5rem;
+      width: 740px;
+    
+    }
+    
+    .block1 , .block2 , .block3 , .block4 , .block5, .block6, .block7 {
+      width: 740px;
+      display: flex;
+    
+    }
+    .reg_light:last-child {
+      margin-left: 10px;
+    }
+    
+    .block9 {
+      display: flex;
+      justify-content: center;
+      width: 340px;
+      text-align: center;
+      margin: 0 auto 4.688rem;
+    }
+    .reg_submit {
+      width: 100%;
+      height: 3.75rem;
+      background: #C192EE;;
+      border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 5rem;
+    font-size: 1.25rem;
+    transition: 03;
+    cursor: pointer;
+    }
+    .block5 {
+      margin-top: 5rem;
+      margin-bottom: 2.75rem;
+      text-align: center;
+      justify-content: center;
+    }
+    .block6 {
+      text-align: center;
+      justify-content: center;
+      position: relative;
+    }
+    .block7 {
+      justify-content: center;
+      margin-top: 44px;
+    }
+
+    .select_css {
+      background-color: transparent;
+      border: 1px solid #C192EE;;
+      border-radius: 5px;
+      max-width: 122px;
+      font-size: 1.125rem;
+      background-repeat: no-repeat;
+    }
+    
+    .select_css:focus {
+    
+      background-repeat: no-repeat;
+      border-color:#C192EE;;
+      outline: 0;
+    }
+
+    .back_btn {
+        width: 12px;
+        height: 20px;
+        position: absolute;
+        left: 75px;
+      }
+      
+      .back_btn:hover {
+        scale: 1.2;
+      }
+      .restore_email  {
+        text-align: center;
+      }

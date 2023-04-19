@@ -1,0 +1,77 @@
+goals
+about_title
+goals_container
+left_block
+right_block
+right_block_top
+right_block_top_item
+right_block_text
+right_block_centre
+right_block_centre_item
+right_block_bottom
+right_block_bottom_item
+
+
+.goals  {
+    width: 1366px;
+    background: #fff;
+    margin: 0 auto;
+  
+  }
+  .goals_container {
+    width: 100%;
+    margin: 0 auto;
+  
+    display: flex;
+    justify-content: center;
+  }
+  .goals_block  {
+    width: 55rem;
+    background: #fff;
+    border-radius: 2rem;
+    position: relative;
+    border: 2px solid #EEAFED;
+    background-image: url('../../assets/images/our_target_back.svg.png');
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 100%;
+
+
+  }
+  
+  .goals_block_text {
+    background: transparent;
+    font-size: 1.2rem;
+    margin: 2.8rem auto 2.8rem;
+    text-align: justify;
+  }
+  .goals_block_text:first-child {
+    padding: 0 4.7rem;
+  }
+  .goals_block_text:last-child {
+    padding-left: 4.7rem;
+    padding-right: 21rem;
+  }
+  .goals_block_text:nth-child(2) {
+    padding-left: 4.7rem;
+    padding-right: 12rem;
+
+  }
+  .goals_block_text:nth-child(3) {
+    padding-left: 4.7rem;
+    padding-right: 18rem;
+  }
+  .goals_block_text:nth-child(4) {
+    padding-left: 4.7rem;
+    padding-right: 20rem;
+  }
+
+  .main_back_purple {
+    width: 31rem;
+    height: 31rem;
+    background: rgba(193, 146, 238, 0.18);
+    filter: blur(50px);
+    position: absolute;
+    top: -8rem;
+    left: -10rem;
+  }

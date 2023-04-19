@@ -1,14 +1,39 @@
-import {useTranslation } from "react-i18next";
 import Header from '../components/Header'
-import Log from '../components/Log'
-import Logo from '../components/Logo'
+import { useState } from 'react';
+import Logo from '../components/Logo/Logo'
 import '../App.css'
-import { Route, Routes, Link } from "react-router-dom";
-
-import Auto from "../components/Auto";
-
+import {Register} from './auto/forms/Register/Register'
+import SelectCountry from './auto/forms/SelectCountry/SelectCountry';
+import Restore from './auto/forms/Restore/Restore';
+import { useNavigate } from 'react-router-dom';
+import { ResMessage } from './auto/forms/ResMessage/ResMessage';
+import Login from '../pages/auto/forms/Login/Login'
 function Auth() {
-  const { t } = useTranslation();
+  let navigate = useNavigate()
+  
+  const [step, setStep] = useState(1);
+	const [userData, setUserData] = useState('')
+	const toStep = (val) => {
+		setStep(val);
+	};
+
+
+	const view = () => {
+		switch (step) {
+			case 1:
+				return <Register toStep={toStep} />;
+			case 2:
+				return   <SelectCountry toStep={toStep} />;
+			case 3:
+				return <Login toStep={toStep}/>;
+			case 4:
+				return <Restore toStep={toStep} />;
+        case 5:
+          return <ResMessage toStep={toStep} />;
+			default:
+				return;
+		}
+	};
 
   return (
     <div className="Login">
@@ -19,7 +44,8 @@ function Auth() {
         <Logo/>
         </div>
         <div className='content'>
-        <Auto/>
+        {view()}
+
         </div>
  
     

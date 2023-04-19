@@ -1,0 +1,160 @@
+
+.getUsers_block {
+    width: 1125px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+
+.get_users  {
+ 
+    width: 1125px;
+    height: 600px;
+    background-color: #fff;
+
+    border: 1px solid #EEAFED;
+border-radius: 20px;
+overflow-y: scroll;
+padding: 2rem;
+
+position: relative;
+
+
+}
+.users_info {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 4rem;
+    border: 1px solid #EEAFED;
+border-radius: 20px;
+background: #fff;
+    position: relative;
+    margin: 2rem auto 1.5rem;
+}
+.users_info_img    {
+    width: 55px;
+height: 57px;
+border-radius: 50%;
+margin-left: 10px;
+margin-right: 8rem;
+}
+.user_first_name  {
+    color: #6D6D6D;
+    font-size: 1.5rem;
+    background: transparent;
+    margin-left: 10px;
+}
+.user_last_name  {
+    color: #6D6D6D;
+    font-size: 1.5rem;
+    background: transparent;
+  
+}
+
+.user_email {
+    position: absolute;
+    right: 18rem;
+    color: #6D6D6D;
+    background: transparent;
+
+}
+
+.user_delete    {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    right: 2rem;
+}
+.user_edit  {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    right: 6rem;
+}
+
+.modal_window   {
+    width: 56rem;
+    height: 37rem;
+    background: #F5F4EF;
+        position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  
+    border: 1px solid #C192EE;
+border-radius: 4rem;
+}
+
+.close  {
+    display: flex;
+    justify-content: flex-end;
+    background: transparent;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+
+}
+.form_input {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 52rem;
+    height: 4rem;
+    border: 1px solid #6D6D6D;
+border-radius: 30px;
+padding-left: 3rem;
+font-size: 1.2rem;
+margin-bottom: 2rem;
+}
+input[type="file"]{
+    display: flex;
+}
+
+.add_btn    {
+    width: 52rem;
+    height: 4rem;
+    background: #C192EE;
+/* colors/violet main color btn */
+
+border: 1px solid #C192EE;
+border-radius: 30px;
+margin:  0 auto;
+display: flex; 
+justify-content: center;
+text-align: center;
+align-items: center;
+}
+.form_input_label   {
+    margin: 0 auto;
+    display: flex;
+    width: 52rem;
+    height: 4rem;
+    border: 1px solid #6D6D6D;
+border-radius: 30px;
+padding-left: 3rem;
+font-size: 1.2rem;
+margin-bottom: 2rem;
+color: #6D6D6D;
+text-align: center;
+align-items: center;
+}
+
+.add_new_users  {
+    background: #C192EE;
+border-radius: 20px;
+width: 210px;
+height: 60px;
+border: none;
+outline: none;
+cursor: pointer;
+margin-top: 3rem;
+margin-bottom: 2rem;
+color: #fff;
+color: 1rem;
+}

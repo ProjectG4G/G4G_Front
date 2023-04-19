@@ -1,0 +1,149 @@
+
+.footer_navbar {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  margin-top: 7rem;
+  }
+
+  .footer_navbar ul   {
+    display: flex;
+    flex-direction: column;
+      background: transparent;
+
+  }
+  .footer_navbar ul li a {
+    background-color: transparent;
+    transition: 0.3s;
+    color: #6D6D6D;
+    font-size: 1.5rem;
+
+  }
+  
+  .footer_navbar ul li a:hover {
+    color: #EEAFED;
+  } 
+
+  .footer {
+   
+    width: 1336px;
+
+
+    border: 2px solid #EEAFED;
+    border-radius: 2rem;
+    background: #fff;
+    position: relative;
+    margin: 2.5rem auto 0 ;
+    display: flex;
+    justify-content: center;
+    padding: 0 37px;
+
+
+  
+  }
+  .footer_container {
+    margin:  0 auto;
+    display: flex;
+    background: transparent;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .share {
+    display: flex;
+    width: 100%;
+    margin: 2rem auto 0;
+    justify-content: center;
+    text-align: center;
+    background: transparent;
+  } 
+  .main_logo  {
+    margin-left: 4.8rem;
+    width: 5rem;
+    height: 4rem;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .footer {
+    .share {
+       & a {
+            height: 3.125rem;
+            width:  3.125rem;
+            line-height:  3.125rem;
+            color:  #fff;
+            font-size: 2rem;
+            background: #6D6D6D;
+                        border-radius: 50%;
+              text-decoration: none;
+            margin:.3rem;
+            transition: 0.3s;
+        }
+    }
+  }
+  
+  .footer .share a:hover{
+    color:  #C192EE;
+    border: 1px solid #C192EE ;
+    transition: 0.3s;
+  
+  }
+  
+  li {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 2.5rem;
+  font-size: 1.25rem;
+}
+.footer  ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+.footer  ul li a:hover {
+  color: #7F3A85;
+  transition: 0.3s;
+
+} 
+
+.footer_logo_img  {
+  height: 64px;
+width: 80px;
+background: transparent;
+margin-top: 1.5rem;
+
+}
+.footer_left  {
+  background: transparent;
+  margin-left: 1.5rem;
+  width: 33%;
+}
+
+.footer_text  {
+  background: transparent;
+  margin-top: 1.5rem;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.footer_back  {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+}
+.footer_right {
+  margin-right: 7.5rem;
+  margin-top: 8.3rem;
+  background: transparent;
+}
+
+.footer_right p {
+  color: #6D6D6D;
+  font-size: 1.5rem;
+  background: transparent;
+}
+
+.footer_right a {
+  margin-top: 2rem;
+}
+
+

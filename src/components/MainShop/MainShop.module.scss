@@ -1,0 +1,144 @@
+.title {
+    font-style: normal;
+font-weight: 300;
+font-size:4rem;
+line-height: 109px;
+color: #fff;
+text-align: left;
+width: 40%;
+position: absolute;
+bottom: 50%;
+left: 2rem;
+
+background: transparent;
+}
+
+.back_img   {
+    max-width: 1101px;
+    margin: 0 auto;
+height: 466px;
+background: transparent;
+}
+
+.back_container {
+ 
+    width: 1366px;
+    margin-top: 2rem;
+    height: 633px;
+    position: relative;
+    background: url('../../assets/images/shop_back.jpg');
+    
+}
+
+.shop_btn   {
+    width: 13rem;
+    height: 3.5rem;
+    background: #C192EE;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+border-radius: 20px;
+position: absolute;
+bottom: 30%;
+left: 2rem;
+}
+
+.features_shop_title    {
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.shop_item  {
+    position: relative;
+    width: 42rem;
+height: 32rem;
+background: url('../../assets/images/clothes.jpg');
+border: 1px solid #BEBEBE;
+border-radius: 20px;
+}
+.shop_item_last {
+    width: 42rem;
+height: 32rem;
+background: url('../../assets/images/shop_items.jpg');
+border: 1px solid #BEBEBE;
+border-radius: 20px;
+margin-left: 1.5rem;
+position: relative;
+}
+.clothes_img    {
+    background: transparent;
+}
+.features_shop_top  {
+    display: flex;
+}
+.features_shop_centre   {
+    display: flex;
+}
+.shop_clothes_item_1  {
+    width: 27rem;
+    height: 32rem;
+    border: 1px solid #BEBEBE;
+border-radius: 10px;
+margin-right: 12px;
+margin-top: 3rem;
+position: relative;
+background: url('../../assets/images/purple_clothes.jpg');
+background-size: cover;
+background-position: center;
+
+}
+.shop_clothes_item_2  {
+    width: 27rem;
+    height: 32rem;
+    border: 1px solid #BEBEBE;
+border-radius: 10px;
+margin-right: 12px;
+margin-top: 3rem;
+position: relative;
+background: url('../../assets/images/clothes.jpg');
+background-size: cover;
+background-position: center;
+
+}
+.shop_clothes_item_3  {
+    width: 27rem;
+    height: 32rem;
+    border: 1px solid #BEBEBE;
+border-radius: 10px;
+margin-right: 12px;
+margin-top: 3rem;
+position: relative;
+background: url('../../assets/images/white_clothes.jpg');
+background-size: cover;
+background-position: center;
+
+}
+
+
+.shop_clothes_item:last-child {
+    background: url('../../assets/images/white_clothes.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.buy_btn    {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    background: transparent;
+    cursor: pointer;
+}
+.shop_name  {
+    font-size: 1.8rem;
+    margin-top: 12px;
+    padding-left: 2rem;
+}
+.shop_price {
+    font-size: 1.3rem;
+    padding-left: 2rem;
+
+    color: #6D6D6D;
+}
